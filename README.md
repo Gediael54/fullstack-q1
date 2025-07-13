@@ -48,8 +48,8 @@ Antes de começar, você precisa ter instalado em sua máquina:
 
 1. **Clone o repositório:**
 ```bash
-git clone https://github.com/seu-usuario/vehicle-management.git
-cd vehicle-management
+git clone https://github.com/seu-usuario/fullstack-q1.git
+cd fullstack-q1
 ```
 
 2. **Instale as dependências:**
@@ -134,7 +134,6 @@ CREATE TRIGGER update_vehicles_updated_at
 
 ```env
 # Database
-DATABASE_URL=postgresql://username:password@localhost:5432/vehicle_management
 DB_HOST=localhost
 DB_PORT=5432
 DB_NAME=vehicle_management
@@ -143,11 +142,8 @@ DB_PASSWORD=sua_senha
 
 # JWT
 JWT_SECRET=sua_chave_secreta_jwt_muito_segura
-JWT_EXPIRES_IN=7d
 
-# Next.js
-NEXTAUTH_URL=http://localhost:3000
-NEXTAUTH_SECRET=sua_chave_secreta_nextauth
+
 ```
 
 2. **Substitua os valores pelos seus dados:**
