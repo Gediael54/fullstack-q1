@@ -5,7 +5,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Sistema de Login',
+  title: 'Prova técnica',
   description: 'Sistema de autenticação com Next.js',
 };
 
