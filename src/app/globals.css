@@ -1,0 +1,150 @@
+/* Imports */
+@import "tailwindcss";
+
+/* Variables */
+:root {
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500;
+  }
+  
+  .input-primary {
+    @apply block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm;
+  }
+  
+  .card {
+    @apply bg-white shadow-lg rounded-lg overflow-hidden;
+  }
+}
+
+/* Scrollbar styles */
+/* Default scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Thin scrollbar */
+.scrollbar-thin-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 #F8FAFC;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar-track {
+  background: #F8FAFC;
+  border-radius: 3px;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+.scrollbar-thin-custom::-webkit-scrollbar-thumb:active {
+  background: #64748B;
+}
+
+/* Ultra thin scrollbar (4px) */
+.scrollbar-ultra-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+.scrollbar-ultra-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-ultra-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-ultra-thin::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.scrollbar-ultra-thin::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Hover-only scrollbar */
+.scrollbar-hover-only {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hover-only::-webkit-scrollbar {
+  width: 0;
+}
+
+.scrollbar-hover-only:hover {
+  scrollbar-width: thin;
+  scrollbar-color: #CBD5E1 transparent;
+}
+
+.scrollbar-hover-only:hover::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-hover-only:hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-hover-only:hover::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
